@@ -9,5 +9,6 @@ return {
   { import = "plugins.snacks"},
   { import = "plugins.gitsings"},
   { import = "plugins.noice"},
+  { import = "plugins.lazygit"},
   { import = "plugins.yazi"},
 }

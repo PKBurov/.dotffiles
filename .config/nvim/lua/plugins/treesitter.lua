@@ -7,6 +7,7 @@ return {
       config.setup({
         auto_install = false,
         ensure_installed = {
+          "lua",
           "bash",
           "ruby",
           "html",
