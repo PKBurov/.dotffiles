@@ -20,6 +20,7 @@ require("lazy").setup({
     branch = "v2.5",
     import = "nvchad.plugins",
   },
+
   { import = "plugins" },
 
 }, lazy_config)
@@ -41,7 +42,7 @@ require "options"
 require "nvchad.autocmds"
 
 vim.schedule(function()
-  require "mappings"
+  require "plugins-mappings"
 end)
 vim.opt.termguicolors = true
 

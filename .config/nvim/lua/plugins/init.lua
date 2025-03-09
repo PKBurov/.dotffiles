@@ -7,10 +7,10 @@ return {
   { import = "plugins.undotree"},
   { import = "plugins.harpoon"},
   { import = "plugins.snacks"},
-  { import = "plugins.gitsings"},
   { import = "plugins.noice"},
   { import = "plugins.lazygit"},
-  { import = "plugins.yazi"},
+  { import = "plugins.nio"},
+  { import = "plugins.nvim-java"}, 
   { import = "plugins.debugging"},
-  { import = "plugins.mndap"},
+  { import = "plugins.yazi"},
 }

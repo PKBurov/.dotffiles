@@ -13,7 +13,6 @@ return {
           "html",
           "css",
           "scss",
-          "java",
           "javascript",
           "typescript",
           "json",
