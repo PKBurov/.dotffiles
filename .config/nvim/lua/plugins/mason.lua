@@ -14,6 +14,9 @@ return {
     config = function()
       require("mason-lspconfig").setup {
         ensure_installed = {
+          "clangd",
+          "clang-format",
+          "codelldb",
           "lua-language-server",
           "html-lsp",
           "css-lsp",
@@ -21,6 +24,7 @@ return {
           "pyright",
           "bashls",
           "jsonls",
+          "jdtls",
         },
         automatic_installation = true,
       }

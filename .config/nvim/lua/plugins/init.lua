@@ -11,4 +11,6 @@ return {
   { import = "plugins.noice"},
   { import = "plugins.lazygit"},
   { import = "plugins.yazi"},
+  { import = "plugins.debugging"},
+  { import = "plugins.mndap"},
 }
