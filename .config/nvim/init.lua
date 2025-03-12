@@ -47,5 +47,5 @@ end)
 vim.opt.termguicolors = true
 
 -- Sets up C++ compiler and executable for nvim
-vim.keymap.set("n", "<leader>c", ":!g++ -o %:r %<CR>")
+vim.keymap.set("n", "<leader>c", ":!g++ -std=c++17 -o %:r %<CR>")
 vim.keymap.set("n", "<leader>r", ":!./%:r<CR>")
