@@ -40,12 +40,10 @@ dofile(vim.g.base46_cache .. "statusline")
 
 require "options"
 require "nvchad.autocmds"
+require "core.mappings"
+
 
 vim.schedule(function()
   require "plugins-mappings"
 end)
 vim.opt.termguicolors = true
-
--- Sets up C++ compiler and executable for nvim
-vim.keymap.set("n", "<leader>c", ":!g++ -std=c++17 -o %:r %<CR>")
-vim.keymap.set("n", "<leader>r", ":!./%:r<CR>")

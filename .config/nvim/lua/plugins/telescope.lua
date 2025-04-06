@@ -12,5 +12,8 @@ return {
         },
       },
     })
+    
+    -- Create a custom keybinding to trigger `Telescope find_files` with `hidden=true`
+    vim.keymap.set("n", "FF", ":Telescope find_files hidden=true<CR>", { noremap = true, silent = true })
   end,
 }

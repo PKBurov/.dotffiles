@@ -13,4 +13,5 @@ return {
   { import = "plugins.nvim-java"}, 
   { import = "plugins.debugging"},
   { import = "plugins.yazi"},
+  { import = "plugins.copilot"},
 }

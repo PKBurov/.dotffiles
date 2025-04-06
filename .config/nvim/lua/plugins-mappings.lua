@@ -10,6 +10,34 @@ map("n", "<C-[>", ":lua require('nvim-tree.api').tree.change_root_to_parent()<CR
 -- Toggle nvim-tree:
 map("n","<leader>e", ":NvimTreeToggle<cr>")
 
+-- Custom keymaps for copilot:
+map("n", "<leader>ccb", function()
+  local input = vim.fn.input "Chat with buffer: "
+  if input ~= "" then
+    require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
+  end
+end, { desc = "Copilot chat with buffer" })
+
+map("v", "<leader>cc", function()
+  local input = vim.fn.input "Chat with selection: "
+  if input ~= "" then
+    require("CopilotChat").ask(input, { selection = require("CopilotChat.select").visual })
+  end
+end, { desc = "Copilot chat with visual selection" })
+
+map("n", "<leader>ccp", function()
+  local actions = require "CopilotChat.actions"
+  require("CopilotChat.integrations.telescope").pick(actions.prompt_actions())
+end, { desc = "Copilot prompt actions" })
+
+map("n", "<leader>cca", function()
+  local input = vim.fn.input "Chat with all files: "
+  if input ~= "" then
+    require("CopilotChat").ask(input, { context = { "buffers", "files:full", "register:+" } })
+  end
+end, { desc = "Copilot ask about all files" })
+
+
 -- Custom Harpoon keymaps
 -- REQUIRED
 harpoon:setup()
@@ -28,4 +56,4 @@ map("n", "<C-S-P>", function() harpoon:list():prev() end)
 map("n", "<C-S-N>", function() harpoon:list():next() end)
 
 -- Toggle UndotreeToggled
-map("n", "‹leader>u", vim. cmd. UndotreeToggled)
+map("n", "‹leader>u", vim.cmd.UndotreeToggled)
